@@ -4,7 +4,11 @@
 function parse_git_branch { 
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
 }
-export PS1="[\[\e[0;36m\]\A \[\e[0;32m\]\u\[\e[0m\]@\[\e[0;35m\]\h\[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[\e[0m\]]\[\e[0;36m\]\\$ \[\e[0m\]"
+PS1="[\[\e[0;36m\]\A \[\e[0;32m\]\u\[\e[0m\]@\[\e[0;35m\]\h\[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[\e[0m\]]\[\e[0;36m\]\\$ \[\e[0m\]"
+
+#ls
+CLICOLOR=1
+LSCOLORS=GxFxCxDxBxegedabagaced
 
 # virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
@@ -21,3 +25,6 @@ alias grep="grep --color=auto"
 
 alias rm="rm -i"
 alias mv="mv -i"
+
+#export
+export PS1 CLICOLOR LSCOLORS
