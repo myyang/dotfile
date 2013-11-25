@@ -1,1 +1,0 @@
-/Users/garfield/program/_dot_file/.vim
