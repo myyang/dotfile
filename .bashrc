@@ -11,6 +11,7 @@ CLICOLOR=1
 LSCOLORS=GxFxCxDxBxegedabagaced
 
 # virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # mysql
