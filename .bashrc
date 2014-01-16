@@ -15,9 +15,10 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # mysql
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+#alias mysql=/usr/local/mysql/bin/mysql
+#alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias sqlserver="sudo /Library/StartupItems/MySQLCOM/MySQLCOM"
+#PATH=${PATH}:/usr/local/mysql/bin
 
 # lazzzzzzzzzzy
 alias v="vim"
@@ -29,3 +30,6 @@ alias mv="mv -i"
 
 #export
 export PS1 CLICOLOR LSCOLORS
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/garfield/.gvm/bin/gvm-init.sh" ]] && source "/Users/garfield/.gvm/bin/gvm-init.sh"
