@@ -1,0 +1,62 @@
+
+#start message off
+startup_message off
+
+#encoding
+defutf8 on
+
+#status lines
+caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
+hardstatus alwaysignore
+hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .R}@%H %=%{= .m} %Y/%m/%d%{= .M} %0c "
+
+#caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+
+#caption always "%{=u .G} %-w%<%{=ub .y}%n %t%{=u .G}%+w "
+#hardstatus alwaysignore
+#hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .W}@%H %=%{= .y} %Y/%m/%d%{= .m} %0c:%s "
+
+#caption always "%{=u .d} %-w%<%{=ub .B}%n %t%{=u .d}%+w "
+#hardstatus alwaysignore 
+#hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .W}@%H %=%{= .y} %Y %M %d(%D) %{= .m} %C %A"
+
+
+# auto detach
+autodetach on
+
+# Refresh the display when exiting programs
+altscreen on
+
+# Dynamic title
+shelltitle '$ |bash'
+
+#rollback line
+defscrollback 5000
+
+#move
+bindkey "^k" next
+bindkey "^j" prev
+
+bindkey "j`" select 0
+bindkey "j1" select 1
+bindkey "j2" select 2
+bindkey "j3" select 3
+bindkey "j4" select 4
+bindkey "j5" select 5
+bindkey "j6" select 6
+bindkey "j7" select 7
+bindkey "j8" select 8
+bindkey "j9" select 9
+
+
+# remove some stupid / dangerous key bindings (got from internet)
+bind s
+bind k
+bind W
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h

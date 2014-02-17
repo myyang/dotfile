@@ -19,10 +19,11 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'supertab'
 Bundle 'klen/python-mode'
 Bundle 'git://github.com/davidhalter/jedi-vim'
+
 
 syntax on
 filetype plugin indent on
@@ -36,3 +37,9 @@ set cindent
 set autoindent
 
 map <F2> :NERDTreeToggle<CR>
+
+" my config
+set ruler
+set wrap
+set hlsearch
+"set statusline
