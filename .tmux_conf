@@ -17,7 +17,7 @@ set-option -g status-bg default
 set-option -g status-attr default
 
 # active window
-set-window-option -g window-status-current-fg green
+set-window-option -g window-status-current-fg yellow
 set-window-option -g window-status-current-bg default
 set-window-option -g window-status-current-attr bright
 
@@ -28,8 +28,8 @@ set-option -g message-attr bright
 
 #status bar
 set -g status-justify centre
-set -g status-left "#[fg=#009900]Session:#S"
-set -g status-right "#[fg=blue] #h #[fg=white]| #[fg=cyan]%d %b %R"
+set -g status-left "#[fg=white]Session:#S"
+set -g status-right "#[fg=green]#(whoami)#[fg=white]@#[fg=magenta]#h #[fg=white]| #[fg=cyan]%H:%M %m-%d"
 
 
 #=====================
