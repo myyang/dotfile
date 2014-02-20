@@ -29,7 +29,8 @@ set-option -g message-attr bright
 #status bar
 set -g status-justify centre
 set -g status-left "#[fg=white]Session:#S"
-set -g status-right "#[fg=green]#(whoami)#[fg=white]@#[fg=magenta]#h #[fg=white]| #[fg=cyan]%H:%M %m-%d"
+set -g status-right-length 70
+set -g status-right "#[fg=green]#(whoami)#[fg=white]@#[fg=magenta]#h #[fg=white]| #[fg=cyan]%m/%d %H:%M"
 
 
 #=====================
