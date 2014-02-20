@@ -27,3 +27,4 @@ ln -Fs $DIR/.bash_profile ~/.bash_profile
 ln -Fs $DIR/.vim ~/.vim
 ln -Fs $DIR/.vimrc ~/.vimrc
 ln -Fs $DIR/.screenrc ~/.screenrc
+ln -Fs $DIR/.tmux_conf ~/.tmux_conf

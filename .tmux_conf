@@ -1,0 +1,41 @@
+#https://wiki.archlinux.org/index.php/tmux
+
+unbind C-b
+set -g prefix C-a
+
+set -g default-terminal "screen-256color"
+set -g history-limit 10000
+
+
+#=====================
+#status bar
+#=====================
+
+# default statusbar colors
+set-option -g status-fg white
+set-option -g status-bg default
+set-option -g status-attr default
+
+# active window
+set-window-option -g window-status-current-fg green
+set-window-option -g window-status-current-bg default
+set-window-option -g window-status-current-attr bright
+
+#message
+set-option -g message-fg red
+set-option -g message-bg black
+set-option -g message-attr bright
+
+#status bar
+set -g status-justify centre
+set -g status-left "#[fg=#009900]Session:#S"
+set -g status-right "#[fg=blue] #h #[fg=white]| #[fg=cyan]%d %b %R"
+
+
+#=====================
+#copy mode
+#=====================
+
+set-window-option -g mode-keys vi
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
