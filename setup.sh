@@ -7,24 +7,17 @@ if [ -d $HOME/.vim ];then
     mv $HOME/.vim $HOME$old/.vim
     echo "mv .vim"
 fi
-if [ -f $HOME/.vimrc ];then
-    mv $HOME/.vimrc $HOME$old/.vimrc
-    echo "mv .vimrc"
-fi
-if [ -f $HOME/.bashrc ];then
-    mv $HOME/.bashrc $HOME$old/.bashrc
-    echo "mv .bashrc"
-fi
-if [ -f $HOME/.bash_profile ];then
-    mv $HOME/.bash_profile $HOME$old/.bash_profile
-    echo "mv .bash_profile"
-fi
+for f in .vimrc .bashrc .bash_profile
+do
+    if [ -f $HOME/$f ];then
+        mv $HOME/$f $HOME$old/$f
+        echo "mv $f to $HOME/$f"
+    fi
+done
 
 # link
 DIR=$(pwd)
-ln -Fs $DIR/.bashrc ~/.bashrc
-ln -Fs $DIR/.bash_profile ~/.bash_profile
-ln -Fs $DIR/.vim ~/.vim
-ln -Fs $DIR/.vimrc ~/.vimrc
-ln -Fs $DIR/.screenrc ~/.screenrc
-ln -Fs $DIR/.tmux_conf ~/.tmux_conf
+for f in .bashrc .bash_profile .vim .vimrc .screenrc .tmux_conf
+do
+    ln -Fs $DIR/$f ~/$f
+done
