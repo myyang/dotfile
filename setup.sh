@@ -11,7 +11,7 @@ for f in .vimrc .bashrc .bash_profile
 do
     if [ -f $HOME/$f ];then
         mv $HOME/$f $HOME$old/$f
-        echo "mv $f to $HOME/$f"
+        echo "mv $f to $HOME$old/$f"
     fi
 done
 
