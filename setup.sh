@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "set up..."
 # backup
 old='/_old_dot_file/'
 [ -d $HOME$old ]||$(mkdir $HOME$old)
@@ -21,3 +22,4 @@ for f in .bashrc .bash_profile .vim .vimrc .screenrc .tmux_conf
 do
     ln -Fs $DIR/$f ~/$f
 done
+echo "done..."
