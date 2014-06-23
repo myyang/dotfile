@@ -18,7 +18,7 @@ done
 
 # link
 DIR=$(pwd)
-for f in .bashrc .bash_profile .vim .vimrc .screenrc .tmux_conf
+for f in .bashrc .bash_profile .vim .vimrc .screenrc .tmux_conf .gitconfig
 do
     ln -Fs $DIR/$f ~/$f
 done
