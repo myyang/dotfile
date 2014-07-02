@@ -2,7 +2,7 @@
 
 echo "set up..."
 # backup
-old='/_old_dot_file/'
+old='/.old_dot_file/'
 [ -d $HOME$old ]||$(mkdir $HOME$old)
 if [ -d $HOME/.vim ];then
     mv $HOME/.vim $HOME$old/.vim
