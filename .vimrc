@@ -11,14 +11,24 @@ au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
 
-set nocompatible               " be iMproved
 filetype off                   " required!
+
+" auto-detect vundle ref=>http://blog.chh.tw/posts/vim-vundle/
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let iCanHazVundle=0
+endif
+
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-
 Bundle 'scrooloose/nerdtree'
 Bundle 'supertab'
 Bundle 'klen/python-mode'
@@ -42,4 +52,4 @@ map <F2> :NERDTreeToggle<CR>
 set ruler
 set wrap
 set hlsearch
-"set statusline
+"set statusline=  # set format...
