@@ -26,7 +26,7 @@ export PATH="$PATH:/usr/local/Cellar/hadoop/1.2.1/libxec/bin"
 
 # lazzzzzzzzzzy
 alias v="vim"
-alias l="ls -valG"
+alias l="ls -valhG"
 alias grep="grep --color=auto"
 
 alias rm="rm -i"
