@@ -1,14 +1,7 @@
 " Configuration file for vim
-set modelines=0		" CVE-2007-2438
 
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
-
-" Don't write backup file if vim is being called by "crontab -e"
+"no .swp/backup file
 au BufWrite /private/tmp/crontab.* set nowritebackup
-" Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
 
 filetype off                   " required!
@@ -24,7 +17,6 @@ if !filereadable(vundle_readme)
     let iCanHazVundle=0
 endif
 
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -35,21 +27,47 @@ Bundle 'klen/python-mode'
 Bundle 'git://github.com/davidhalter/jedi-vim'
 
 
-syntax on
 filetype plugin indent on
 
+"General and other...
+set modelines=0		" CVE-2007-2438
+set nocompatible	" Use Vim defaults instead of 100% vi compatibility
+set backspace=2		" more powerful backspacing
+set ruler           "lower right info
+set number
+
+
+"text, tab, indent
 set expandtab
+set smarttab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set number
-set cindent 
 set autoindent
+set smartindent
+set wrap
 
 map <F2> :NERDTreeToggle<CR>
 
-" my config
-set ruler
-set wrap
-set hlsearch
-"set statusline=  # set format...
+"color
+syntax on
+"colorscheme desert
+set background=dark
+
+"search
+set hlsearch    "highlight
+set ignorecase  "ignore case when searching
+set smartcase   "search case when input with case
+set incsearch   "search like browser
+
+"statusline
+set laststatus=2
+if has('statusline')
+    "set statusline=%#Question#                          "highlighting
+    set statusline+=%<%f%r%*%m                          "filename, readonly, modified
+    "set statusline+=%#Question#                         "highlighting
+    set statusline+=\ [%{(&fenc==\"\"?&enc:&fenc)}]\    "encoding
+    set statusline+=%=                                  "left/right-aligned separator
+    set statusline+=0x%-8B\                             "character code under cursor
+    set statusline+=%l-%c\ %P                           "line-column percentage
+endif
