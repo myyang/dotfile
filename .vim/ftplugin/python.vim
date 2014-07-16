@@ -1,0 +1,36 @@
+"vim setting for python
+
+"pymode
+
+"enable
+let g:pymode = 1
+
+let g:pymode_trim_whitespaces = 1
+
+let g:pymode_options = 1
+
+let g:pymode_options_max_line_length = 99
+
+let g:pymode_quickfix_maxheight = 5
+
+let g:pymode_motion = 1 "use [[ or ]] jump cls/func, etc.. see :help pymode
+
+let g:pymode_virtualenv = 1
+let g:pymode_virtualenv_path = $WORKON_HOME
+
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>x'
+
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_message = 1
+
+let g:pymode_rope = 0
+
+let g:pymode_syntax = 1
+
+"jedi-vim
+let g:jedi#completions_command = "<C-N>"
