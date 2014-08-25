@@ -1,5 +1,7 @@
 #garfield.yang .bashrc
 
+export PATH="/usr/local/bin:$PATH"
+
 #setup prompt
 function parse_git_branch { 
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
@@ -20,9 +22,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 #alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias sqlserver="sudo /Library/StartupItems/MySQLCOM/MySQLCOM"
 #PATH=${PATH}:/usr/local/mysql/bin
-
-#hadoop
-export PATH="$PATH:/usr/local/Cellar/hadoop/1.2.1/libxec/bin"
 
 # lazzzzzzzzzzy
 alias v="vim"
