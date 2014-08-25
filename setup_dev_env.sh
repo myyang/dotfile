@@ -7,6 +7,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 echo "=====> setup git..."
 brew install git
+brew install git-flow
 
 echo "=====> setup pip..."
 sudo easy_install pip
