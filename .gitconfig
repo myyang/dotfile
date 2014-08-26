@@ -6,7 +6,7 @@
 	log = auto
 
 [alias]
-    lo = "log --graph --pretty=format:'%Cred%h%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+    lo = "log --graph --pretty=format:'%Cred%h%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=short"
     co = checkout
     st = status
 [core]
