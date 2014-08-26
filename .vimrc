@@ -47,8 +47,6 @@ set autoindent
 set smartindent
 set wrap
 
-map <F2> :NERDTreeToggle<CR>
-
 "color
 syntax on
 "colorscheme desert
@@ -71,3 +69,8 @@ if has('statusline')
     set statusline+=0x%-8B\                             "character code under cursor
     set statusline+=%l-%c\ %P                           "line-column percentage
 endif
+
+"mapping
+map <F2> :NERDTreeToggle<CR>
+"mapping incrasing number to ctrl-i becase c-a would be caught by tmux
+map <C-i> <C-a> 
