@@ -6,7 +6,6 @@ export PATH="/usr/local/bin:$PATH"
 function parse_git_branch { 
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
 }
-#PS1="[\[\e[0;36m\]\A \[\e[0;32m\]\u\[\e[0m\]@\[\e[0;35m\]\h\[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[\e[0m\]]\[\e[0;36m\]\\$ \[\e[0m\]"
 PS1="[\[\e[0;36m\]\A \[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[\e[0m\]]\[\e[0;36m\]\\$ \[\e[0m\]"
 
 #ls
@@ -33,6 +32,3 @@ alias mv="mv -i"
 
 #export
 export PS1 CLICOLOR LSCOLORS
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/garfield/.gvm/bin/gvm-init.sh" ]] && source "/Users/garfield/.gvm/bin/gvm-init.sh"
