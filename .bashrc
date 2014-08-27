@@ -32,3 +32,4 @@ alias mv="mv -i"
 
 #export
 export PS1 CLICOLOR LSCOLORS
+export EDITOR=/usr/bin/vim
