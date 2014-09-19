@@ -1,0 +1,5 @@
+#vim editor
+*.swp
+
+#rope generated
+.ropeproject
