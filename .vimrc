@@ -25,6 +25,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'supertab'
 Bundle 'klen/python-mode'
 Bundle 'git://github.com/davidhalter/jedi-vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 
 filetype plugin indent on
@@ -74,3 +76,8 @@ endif
 map <F2> :NERDTreeToggle<CR>
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
 map <C-i> <C-a> 
+
+"auto docstring
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
