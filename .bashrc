@@ -1,6 +1,6 @@
 #garfield.yang .bashrc
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 #setup prompt
 function parse_git_branch { 
