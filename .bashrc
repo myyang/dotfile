@@ -16,12 +16,6 @@ LSCOLORS=GxFxCxDxBxegedabagaced
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# mysql on imac
-#alias mysql=/usr/local/mysql/bin/mysql
-#alias mysqladmin=/usr/local/mysql/bin/mysqladmin
-alias sqlserver="sudo /Library/StartupItems/MySQLCOM/MySQLCOM"
-#PATH=${PATH}:/usr/local/mysql/bin
-
 # lazzzzzzzzzzy
 alias v="vim"
 alias l="ls -valhG"
