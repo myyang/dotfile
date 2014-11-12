@@ -3,7 +3,7 @@
 echo "=====> setup..."
 
 echo "=====> setup  homebrew..."
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "=====> setup git..."
 /usr/local/bin/brew install git
