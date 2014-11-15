@@ -27,6 +27,8 @@ Bundle 'klen/python-mode'
 Bundle 'git://github.com/davidhalter/jedi-vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'flazz/vim-colorschemes'
 
 
 filetype plugin indent on
@@ -37,6 +39,7 @@ set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 set ruler           "lower right info
 set number
+set encoding=utf-8
 
 
 "text, tab, indent
@@ -78,6 +81,6 @@ map <F2> :NERDTreeToggle<CR>
 map <C-i> <C-a> 
 
 "auto docstring
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-k>"
+let g:UltiSnipsJumpBackwardTrigger="<C-l>"

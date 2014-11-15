@@ -39,6 +39,9 @@ let g:pymode_syntax = 1
 
 let g:pymode_folding = 1
 
+let g:pymode_rope_complete_on_dot = 0
+
 "jedi-vim
 let g:jedi#auto_vim_configuration = 1
 let g:jedi#completions_command = "<C-p>"
+let g:jedi#popup_on_dot = 0
