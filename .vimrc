@@ -29,6 +29,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'Rykka/riv.vim'
 
 
 filetype plugin indent on
