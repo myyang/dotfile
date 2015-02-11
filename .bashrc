@@ -27,3 +27,5 @@ alias mv="mv -i"
 #export
 export PS1 CLICOLOR LSCOLORS
 export EDITOR=/usr/bin/vim
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
