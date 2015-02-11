@@ -45,3 +45,6 @@ let g:pymode_rope_complete_on_dot = 0
 let g:jedi#auto_vim_configuration = 1
 let g:jedi#completions_command = "<C-p>"
 let g:jedi#popup_on_dot = 0
+
+"vim-snippet
+let g:ultisnips_python_style = "sphinx"
