@@ -29,3 +29,11 @@ export PS1 CLICOLOR LSCOLORS
 export EDITOR=/usr/bin/vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi

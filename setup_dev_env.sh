@@ -17,6 +17,8 @@ echo "=====> setup virtualenv & wrapper..."
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
 
+echo "=====> installing bash-completion..."
+/usr/local/bin/brew install bash-completion
 
 echo "=====> setup ruby-env, build"
 /usr/local/bin/brew install rbenv ruby-build rbenv-gem-rehash
