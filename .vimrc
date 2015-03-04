@@ -18,19 +18,20 @@ if !filereadable(vundle_readme)
 endif
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'supertab'
-Bundle 'klen/python-mode'
-Bundle 'git://github.com/davidhalter/jedi-vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'Rykka/riv.vim'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'supertab'
+Plugin 'klen/python-mode'
+Plugin 'git://github.com/davidhalter/jedi-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Rykka/riv.vim'
 
+call vundle#end()
 
 filetype plugin indent on
 
