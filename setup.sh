@@ -1,25 +1,37 @@
 #!/usr/bin/env bash
 
-echo "set up..."
-# backup
-old='/.old_dot_file/'
-[ -d $HOME$old ]||$(mkdir $HOME$old)
-if [ -d $HOME/.vim ];then
-    mv $HOME/.vim $HOME$old/.vim
-    echo "mv .vim"
-fi
-for f in .vimrc .bashrc .bash_profile
-do
-    if [ -f $HOME/$f ];then
-        mv $HOME/$f $HOME$old/$f
-        echo "mv $f to $HOME$old/$f"
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+echo -e "Start linking file under: \033[93m$DIR\033[0m"
+
+echo -e "\033[96mDot file\033[0m"
+for i in `ls -a $DIR | grep '^\.[^.]' | grep -v '^\.\(vim\|git\)$'`; do
+    if [ -e "$HOME/$i" ]
+    then
+        echo -e "\033[91mFound \033[93m$i\033[0m, skip linking, please merge manually."
+    else
+        echo -e "\033[92mNope \033[93m$i\033[0m, linking..."
+        ln -s $DIR/$i $HOME/$i
     fi
 done
 
-# link
-DIR=$(pwd)
-for f in .bashrc .bash_profile .vimrc .screenrc .tmux_conf .gitconfig .gitignore
-do
-    ln -Fs $DIR/$f ~/$f
+echo -e "\033[96mDot folder\033[0m"
+# vim 
+vimf=$DIR'/.vim/'
+vimhome=$HOME'/.vim/'
+for i in `ls $vimf`; do
+
+    [ ! -d "$vimhome/$i" ]  && echo -e "\033[92mCreate folder: \033[93m$i\033[0m" && mkdir -p $vimhome/$i || echo -e "Folder exists: \033[93m$i\033[0m"
+
+    for j in `ls $vimf/$i`; do
+        if [ -e "$vimhome/$i/$j" ]
+        then
+            echo -e "\033[91mFound \033[93m$i/$j\033[0m, skip linking, please merge manually."
+        else
+            echo -e "\033[92mNope \033[93m$i/$j\033[0m, linking..."
+            ln -s $vimf/$i/$j $vimhome/$i/$j
+        fi
+    done
+
 done
-echo "done..."
+
+echo -e "\033[92mDone!\033[0m"
