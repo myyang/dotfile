@@ -70,6 +70,7 @@ set laststatus=2
 if has('statusline')
     "set statusline=%#Question#                          "highlighting
     set statusline+=%<%f%r%*%m                          "filename, readonly, modified
+    set statusline+=%y                                  "filetype
     "set statusline+=%#Question#                         "highlighting
     set statusline+=\ [%{(&fenc==\"\"?&enc:&fenc)}]\    "encoding
     set statusline+=%=                                  "left/right-aligned separator
