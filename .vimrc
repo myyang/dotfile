@@ -24,10 +24,10 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'supertab'
 Plugin 'klen/python-mode'
-Plugin 'git://github.com/davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Rykka/riv.vim'
 
@@ -84,5 +84,6 @@ map <C-i> <C-a>
 
 "auto docstring
 let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsListSnippets="<C-u>"
 let g:UltiSnipsJumpForwardTrigger="<C-k>"
 let g:UltiSnipsJumpBackwardTrigger="<C-l>"
