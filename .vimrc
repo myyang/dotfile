@@ -22,14 +22,25 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
-Plugin 'supertab'
-Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Rykka/riv.vim'
+Plugin 'majutsushi/tagbar'
+
+Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+if has("python")
+    Plugin 'Valloric/YouCompleteMe'
+endif
+
+Plugin 'fatih/vim-go'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
+Plugin 'othree/html5.vim'
 
 call vundle#end()
 
@@ -79,9 +90,11 @@ if has('statusline')
 endif
 
 "mapping
-map <F2> :NERDTreeToggle<CR>
+map <leader>2 :NERDTreeToggle<CR>
+nmap <leader>8 :TagbarToggle<CR>
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
 map <C-i> <C-a> 
+nmap <leader>o o<Esc>
 
 "auto docstring
 let g:UltiSnipsExpandTrigger="<C-j>"
