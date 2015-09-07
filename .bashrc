@@ -2,6 +2,8 @@
 
 # pre export (PATH-related expected)
 export PATH="/usr/local/heroku/bin:$PATH"  # Heroku
+export PATH="/usr/local/go/bin:${PATH}"  # GO-Lang
+export GOPATH="/usr/local/gocode"
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"  # Put at last export, dominate none-compiled command
 
