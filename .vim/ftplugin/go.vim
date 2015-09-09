@@ -25,8 +25,10 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 0
 let g:go_play_open_browser = 0
 
-if !isdirectory("/usr/local/gocode")
-    call mkdir("/usr/local/gocode", "p")
+let tool_path = "/usr/local/vim-go-tool"
+let tool_bin_path = "~/usr/local/vim-go-tool/bin"
+if !isdirectory(tool_path)
+    call mkdir(tool_path, "p")
 endif
 
-let g:go_bin_path = "/usr/local/gocode/bin"
+let g:go_bin_path = expand(tool_bin_path)
