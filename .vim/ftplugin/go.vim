@@ -26,7 +26,7 @@ let g:go_fmt_autosave = 0
 let g:go_play_open_browser = 0
 
 let tool_path = "/usr/local/vim-go-tool"
-let tool_bin_path = "~/usr/local/vim-go-tool/bin"
+let tool_bin_path = "/usr/local/vim-go-tool/bin"
 if !isdirectory(tool_path)
     call mkdir(tool_path, "p")
 endif
