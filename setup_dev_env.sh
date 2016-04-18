@@ -1,24 +1,30 @@
 #!/usr/bin/env bash
 
-echo "=====> setup..."
+echo "----- setup dev -----"
 
-echo "=====> setup  homebrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+pkgi=unknow
+this=`uname`
+if [ "$this" == "Darwin" ]; then
+    # OSX
+    echo "=====> setup  homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    pkgi="/usr/local/bin/brew install "
+elif [ "$this" == "Linux" ]; then
+    # assume debian
+    pkgi="sudo apt-get install -y "
+fi
 
-echo "=====> setup git..."
-/usr/local/bin/brew install git
-/usr/local/bin/brew install git-flow
+echo "=====> installing cmd and git"
+$pkgm git git-flow bash-completion
 
-echo "=====> setup pip..."
+echo "=====> setup python and pip..."
+bash < <(curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
+pyenv update 
+# pip virtualenv
 sudo easy_install pip
-sudo pip install yolk # yolk -V [pkg]: list availabe pkg version
+sudo pip install yolk virtualenv virtualenvwrapper
 
-echo "=====> setup virtualenv & wrapper..."
-sudo pip install virtualenv
-sudo pip install virtualenvwrapper
+echo "=====> setup gvm ..."
+bash < <(curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
-echo "=====> installing bash-completion..."
-/usr/local/bin/brew install bash-completion
-
-echo "=====> setup ruby-env, build"
-/usr/local/bin/brew install rbenv ruby-build rbenv-gem-rehash
+echo "----- finish -----"

@@ -1,13 +1,6 @@
 #garfield.yang .bashrc
 
 # pre export (PATH-related expected)
-export PATH="/usr/local/heroku/bin:$PATH"  # Heroku
-export GOPATH="$HOME/gopath"  # GO-Lang
-if [ ! -d $GOPATH ]; then
-    mkdir -p $GOPATH
-fi
-export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
-
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"  # Put at last export, dominate none-compiled command
 
 #setup prompt
@@ -19,10 +12,6 @@ PS1="[\[\e[0;36m\]\A \[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[
 # color schema
 CLICOLOR=1
 LSCOLORS=GxFxCxDxBxegedabagaced
-
-# virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 
 # lazzzzzzzzzzy
 alias v="vim"
