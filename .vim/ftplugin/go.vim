@@ -2,18 +2,27 @@
 nmap <leader>x <Plug>(go-run)
 nmap <leader>b <Plug>(go-build)
 nmap <leader>t <Plug>(go-test)
-nmap <leader>c <Plug>(go-coverage)
+nmap <leader>cv <Plug>(go-coverage)
 
 nmap <Leader>ds <Plug>(go-def-split)
 nmap <Leader>dv <Plug>(go-def-vertical)
 nmap <Leader>dt <Plug>(go-def-tab)
 
-nmap <Leader>gK <Plug>(go-doc)
-nmap <Leader>gk <Plug>(go-doc-vertical)
+nmap <Leader>k <Plug>(go-doc)
+nmap <Leader>K <Plug>(go-doc-vertical)
 
-nmap <Leader>s <Plug>(go-implements)
-nmap <Leader>i <Plug>(go-info)
-nmap <Leader>e <Plug>(go-rename)
+nmap <Leader>imp <Plug>(go-import)
+nmap <Leader>ipl <Plug>(go-implements)
+nmap <Leader>inf <Plug>(go-info)
+nmap <Leader>r <Plug>(go-rename)
+
+nmap <Leader>l <Plug>(go-metalinter)
+nmap <Leader>v <Plug>(go-vet)
+
+nmap <Leader>ce <Plug>(go-callees)
+nmap <Leader>cr <Plug>(go-callers)
+
+imap <C-X> <Esc>:w<CR>\x
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
