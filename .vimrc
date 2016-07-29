@@ -21,19 +21,22 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
+
 Plugin 'scrooloose/nerdtree'
 "Plugin 'supertab'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'majutsushi/tagbar'
+
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'flazz/vim-colorschemes'
+
+Plugin 'vim-scripts/Conque-GDB'
+
 Plugin 'Rykka/riv.vim'
-Plugin 'majutsushi/tagbar'
 
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
-if has("python")
-    Plugin 'Valloric/YouCompleteMe'
-endif
 
 Plugin 'fatih/vim-go'
 
@@ -95,6 +98,8 @@ nmap <leader>8 :TagbarToggle<CR>
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
 map <C-i> <C-a> 
 nmap <leader>o o<Esc>
+map <C-D> :ConqueGdb
+
 
 "auto docstring
 let g:UltiSnipsExpandTrigger="<C-j>"
