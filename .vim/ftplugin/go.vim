@@ -1,7 +1,8 @@
 
 nmap <leader>x <Plug>(go-run)
 nmap <leader>b <Plug>(go-build)
-nmap <leader>t <Plug>(go-test)
+nmap <leader>tt <Plug>(go-test)
+nmap <leader>tc :!go test -c -gcflags "-N -l"<CR>
 nmap <leader>cv <Plug>(go-coverage)
 
 nmap <Leader>ds <Plug>(go-def-split)
@@ -11,8 +12,8 @@ nmap <Leader>dt <Plug>(go-def-tab)
 nmap <Leader>k <Plug>(go-doc)
 nmap <Leader>K <Plug>(go-doc-vertical)
 
-nmap <Leader>l <Plug>(go-import)
-imap <C-L> <Esc>\la
+nmap <Leader>y <Plug>(go-import)
+imap <C-Y> <Esc>\ya
 nmap <Leader>ip <Plug>(go-implements)
 nmap <Leader>in <Plug>(go-info)
 nmap <Leader>r <Plug>(go-rename)
@@ -42,6 +43,6 @@ if !isdirectory(tool_bin_path)
     autocmd VimEnter *.go execute ':GoInstallBinaries' | cw 20
 endif
 
-let g:go_bin_path = tool_bin_path
+let g:go_bin_path = expand(tool_bin_path)
 
 autocmd BufWritePost,FileWritePost *.go execute ':GoLint' | cwindow

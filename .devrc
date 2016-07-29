@@ -15,4 +15,9 @@ if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
 fi
 
 # gvm
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
+    source "$HOME/.gvm/scripts/gvm"
+    export PATH="$HOME/.vim/vim-go-tool/bin:$PATH"
+else
+    echo "no gvm tool"
+fi
