@@ -16,7 +16,6 @@ let g:pymode_quickfix_maxheight = 5
 let g:pymode_motion = 1 "use [[ or ]] jump cls/func, etc.. see :help pymode
 
 let g:pymode_virtualenv = 1
-"let g:pymode_virtualenv_path = $WORKON_HOME
 
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>x'
@@ -34,27 +33,21 @@ let g:pymode_lint_options_pylint =
     \ {'max-line-length': g:pymode_options_max_line_length}
 
 let g:pymode_rope = 1
+let g:pymode_rope_complete_on_dot = 0  "Use ycm auto-completion
 
 let g:pymode_syntax = 1
 
 let g:pymode_folding = 1
 
-let g:pymode_rope_complete_on_dot = 0
-
 "jedi-vim
 let g:jedi#auto_vim_configuration = 1
 let g:jedi#completions_command = "<C-n>"
+let g:jedi#popup_on_dot = 0  " use ycm auto-completion
 
 "vim-snippet
 let g:ultisnips_python_style = "sphinx"
 
-"Py version
-if has("python")
-    let g:pymode_python = 'python'
-    let g:jedi#popup_on_dot = 0
-    let g:jedi#force_py_version = 2
-elseif has("python3")
-    let g:pymode_python = 'python3'
-    let g:jedi#popup_on_dot = 1
-    let g:jedi#force_py_version = 3
-endif
+"ycm-python
+" Please see ycm README.md:
+"   ### I can't complete python packages in a virtual environment.
+let g:ycm_python_binary_path = "python"
