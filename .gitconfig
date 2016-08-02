@@ -7,7 +7,7 @@
 
 [alias]
     cm = commit -m
-    lo = "log --graph --pretty=format:'%Cred%h%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%Creset' --abbrev-commit --date=short"
+	lo = log --graph --pretty=format:'%Cred%h%Creset %C(blue)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%Creset' --abbrev-commit --date=short
     co = checkout
     st = status
     us = reset HEAD
