@@ -7,11 +7,20 @@ this=`uname`
 if [ "$this" == "Darwin" ]; then
     # OSX
     echo "=====> setup  homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    if [ ! -f /usr/local/bin/brew ]; then
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    else
+        echo "homebrew installed!"
+    fi
     pkgi="/usr/local/bin/brew install "
 elif [ "$this" == "Linux" ]; then
     # assume debian
     pkgi="sudo apt-get install -y "
+fi
+
+if [ "$pkgi" == "unknow" ]; then
+    echo "Error: No expected package management"
+    exit 1
 fi
 
 echo "=====> installing cmd and git"
