@@ -15,14 +15,12 @@ elif [ "$this" == "Linux" ]; then
 fi
 
 echo "=====> installing cmd and git"
-$pkgm git git-flow bash-completion
+$pkgi git git-flow bash-completion
 
 echo "=====> setup python and pip..."
 bash < <(curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
 pyenv update 
-# pip virtualenv
 sudo easy_install pip
-sudo pip install yolk virtualenv virtualenvwrapper
 
 echo "=====> setup gvm ..."
 bash < <(curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
