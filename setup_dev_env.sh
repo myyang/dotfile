@@ -15,7 +15,7 @@ if [ "$this" == "Darwin" ]; then
     pkgi="/usr/local/bin/brew install "
 elif [ "$this" == "Linux" ]; then
     # assume debian
-    pkgi="sudo apt-get install -y "
+    pkgi="apt-get install -y "
 fi
 
 if [ "$pkgi" == "unknow" ]; then
@@ -29,7 +29,7 @@ $pkgi git git-flow bash-completion
 echo "=====> setup python and pip..."
 bash < <(curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
 pyenv update 
-sudo easy_install pip
+easy_install pip
 
 echo "=====> setup gvm ..."
 bash < <(curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
