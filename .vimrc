@@ -101,8 +101,11 @@ nmap <leader>o o<Esc>
 map <C-D> :ConqueGdb
 
 
-"auto docstring
+"auto complete
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsListSnippets="<C-u>"
 let g:UltiSnipsJumpForwardTrigger="<C-k>"
 let g:UltiSnipsJumpBackwardTrigger="<C-l>"
+let g:UltiSnipsEditSplit="context"
+let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/ultisnips"]
