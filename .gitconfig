@@ -13,7 +13,7 @@
     us = reset HEAD
     uc = reset HEAD^ --soft
 [core]
-	editor = /usr/local/bin/vim
+	editor = vim
 	excludesfile = ~/.gitignore
 [grep]
 	lineNumber = true
