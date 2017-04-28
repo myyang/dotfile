@@ -12,6 +12,7 @@
     st = status
     us = reset HEAD
     uc = reset HEAD^ --soft
+    df = diff
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
