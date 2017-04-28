@@ -93,12 +93,15 @@ if has('statusline')
 endif
 
 "mapping
-map <leader>2 :NERDTreeToggle<CR>
-nmap <leader>8 :TagbarToggle<CR>
+
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
 map <C-i> <C-a> 
 nmap <leader>o o<Esc>
+imap <C-X> <Esc>:w<CR>\x
+
 map <C-D> :ConqueGdb
+map <leader>2 :NERDTreeToggle<CR>
+nmap <leader>8 :TagbarToggle<CR>
 
 
 "auto complete
