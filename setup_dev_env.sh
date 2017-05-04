@@ -23,8 +23,8 @@ if [ "$pkgi" == "unknow" ]; then
     exit 1
 fi
 
-echo "=====> installing cmd and git"
-$pkgi git git-flow bash-completion make bison binutils gcc cmake
+echo "=====> installing tools"
+$pkgi git git-flow bash-completion make bison binutils gcc cmake curl
 
 echo "=====> setup python and pip..."
 bash < <(curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
