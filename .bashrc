@@ -15,6 +15,7 @@ LSCOLORS=GxFxCxDxBxegedabagaced
 
 # lazzzzzzzzzzy
 alias v="vim"
+alias vi="vim"
 alias l="ls -valhG"
 alias grep="grep --color=auto"
 

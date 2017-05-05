@@ -50,7 +50,7 @@ call vundle#end()
 filetype plugin indent on
 
 "General and other...
-set modelines=0		" CVE-2007-2438
+set modeline
 set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 set ruler           "lower right info

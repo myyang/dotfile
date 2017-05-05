@@ -39,6 +39,7 @@ let g:go_play_open_browser = 0
 let g:go_info_mode = 'guru'
 let g:go_updatetime = 600
 let g:go_doc_command = "go doc"
+let g:go_auto_type_info = 1
 
 let tool_bin_path = expand("~/.vim/vim-go-tool/bin")
 if !isdirectory(tool_bin_path)
