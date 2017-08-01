@@ -26,6 +26,7 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'supertab'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
+Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
