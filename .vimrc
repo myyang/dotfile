@@ -27,6 +27,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/vim-slumlord'
+Plugin 'aklt/plantuml-syntax'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
@@ -35,6 +37,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Conque-GDB'
 
 Plugin 'Rykka/riv.vim'
+Plugin 'plasticboy/vim-markdown'
 
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
