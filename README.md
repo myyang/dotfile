@@ -27,8 +27,6 @@ $ ./setup_dev_env.sh
 * git
 * git-flow
 * pip
-* yolk
 * bash-completion
-* rbenv
-* ruby-build
-* rbenv-gem-rehash
+* pyenv
+* gvm
