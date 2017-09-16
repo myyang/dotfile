@@ -10,9 +10,10 @@ nmap <Leader>dv <Plug>(go-def-vertical)
 nmap <Leader>dt <Plug>(go-def-tab)
 
 nmap <Leader>k <Plug>(go-doc)
-nmap <Leader>K <Plug>(go-doc-vertical)
+nmap <Leader>kv <Plug>(go-doc-vertical)
 
 nmap <Leader>y <Plug>(go-import)
+nmap <Leader>ys <Plug>(go-imports)
 imap <C-Y> <Esc>\ya
 nmap <Leader>ip <Plug>(go-implements)
 nmap <Leader>in <Plug>(go-info)
@@ -25,18 +26,18 @@ nmap <Leader>v <Plug>(go-vet)
 nmap <Leader>ce <Plug>(go-callees)
 nmap <Leader>cr <Plug>(go-callers)
 
-imap <C-X> <Esc>:w<CR>\x
-
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
 let g:go_play_open_browser = 0
 let g:go_auto_type_info = 1
+let g:go_doc_command = "gocode"
 
 let tool_bin_path = expand("~/.vim/vim-go-tool/bin")
 if !isdirectory(tool_bin_path)
