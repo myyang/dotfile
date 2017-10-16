@@ -7,7 +7,7 @@ nmap <leader>cv <Plug>(go-coverage)
 
 nmap <Leader>ds <Plug>(go-def-split)
 nmap <Leader>dv <Plug>(go-def-vertical)
-nmap <Leader>dt <Plug>(go-def-tab)
+nmap <Leader>dt <Plug>(go-def)
 
 nmap <Leader>k <Plug>(go-doc)
 nmap <Leader>kv <Plug>(go-doc-vertical)
@@ -47,4 +47,4 @@ endif
 
 let g:go_bin_path = expand(tool_bin_path)
 
-autocmd BufWritePost,FileWritePost *.go execute ':GoLint' | cwindow
+"autocmd BufWritePost,FileWritePost *.go execute ':GoLint' | cwindow
