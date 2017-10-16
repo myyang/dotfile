@@ -13,6 +13,9 @@
     us = reset HEAD
     uc = reset HEAD^ --soft
     df = diff
+    cf = commit --fixup
+    dfs = diff --staged
+    rbi = rebase --autosquash -i
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
