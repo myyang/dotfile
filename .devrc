@@ -15,3 +15,16 @@ if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
 else
     echo "no gvm tool"
 fi
+
+#==========================
+# generic develop shortcuts
+#==========================
+# git conflict
+alias gitcH="sed -e '/<<<</,/====/ d' -e '/>>>>/ d'"
+alias gitcN="sed -e '/====/,/>>>>/ d' -e '/<<<</ d'"
+
+
+#===========
+# shortcuts
+#===========
+alias gcl="$HOME/workspace/google-cloud-sdk/bin/gcloud"
