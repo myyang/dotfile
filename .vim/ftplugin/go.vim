@@ -18,6 +18,7 @@ imap <C-Y> <Esc>\ya
 nmap <Leader>ip <Plug>(go-implements)
 nmap <Leader>in <Plug>(go-info)
 nmap <Leader>r <Plug>(go-rename)
+nmap <Leader>l <Plug>(go-lint)
 
 
 nmap <Leader>m <Plug>(go-metalinter)
@@ -47,4 +48,9 @@ endif
 
 let g:go_bin_path = expand(tool_bin_path)
 
-"autocmd BufWritePost,FileWritePost *.go execute ':GoLint' | cwindow
+set tw=80
+set colorcolumn=81
+
+let g:go_list_autoclose = 1
+let g:go_list_type = "locationlist"
+autocmd BufWritePost,FileWritePost *.go execute ':GoLint' | cwindow
