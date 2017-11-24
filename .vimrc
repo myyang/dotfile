@@ -29,6 +29,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/vim-slumlord'
 Plugin 'aklt/plantuml-syntax'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
@@ -116,3 +117,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-l>"
 let g:UltiSnipsEditSplit="context"
 let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/ultisnips"]
+
+"ctrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
