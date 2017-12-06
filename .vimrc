@@ -22,33 +22,32 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
+" Genernal
 Plugin 'scrooloose/nerdtree'
-"Plugin 'supertab'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/vim-slumlord'
-Plugin 'aklt/plantuml-syntax'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mzlogin/vim-markdown-toc'
 
+" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
+" GDB
 Plugin 'vim-scripts/Conque-GDB'
 
+" Markup
 Plugin 'Rykka/riv.vim'
 Plugin 'plasticboy/vim-markdown'
 
+" Python
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
 
+" Go
 Plugin 'fatih/vim-go'
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'burnettk/vim-angular'
-Plugin 'othree/html5.vim'
 
 call vundle#end()
 
@@ -75,8 +74,8 @@ set wrap
 
 "color
 syntax on
-"colorscheme desert
 set background=dark
+highlight ColorColumn ctermbg=8
 
 "search
 set hlsearch    "highlight
