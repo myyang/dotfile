@@ -17,6 +17,9 @@
     dfs = diff --staged
     rbi = rebase --autosquash -i
     lf = ls-files
+    pl = pull
+    pu = push
+    pf = push -f
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
