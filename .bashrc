@@ -37,5 +37,5 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # quick file encryption
-alias encfile="openssl aes-256-cbc -a -in " # + filename [-out target.file]
-alias decfile="openssl aes-256-cbc -a -d -in " # + filename [-out target.file]
+alias encrypt="openssl aes-256-cbc -a -in " # + filename [-out target.file]
+alias decrypt="openssl aes-256-cbc -a -d -in " # + filename [-out target.file]
