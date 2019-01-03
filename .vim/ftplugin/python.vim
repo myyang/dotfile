@@ -32,7 +32,7 @@ let g:pymode_lint_options_pylint =
     \ {'max-line-length': g:pymode_options_max_line_length}
 let g:pymode_lint_ignore = "E501,E702"
 
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 let g:pymode_rope_complete_on_dot = 0  "Use ycm auto-completion
 
 let g:pymode_syntax = 1

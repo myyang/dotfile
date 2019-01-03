@@ -30,6 +30,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 
+Plugin 'tpope/vim-fugitive'
+
 " Autocomplete
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
@@ -49,6 +51,9 @@ Plugin 'davidhalter/jedi-vim'
 " Go
 Plugin 'fatih/vim-go'
 
+" Solidlity
+Plugin 'tomlion/vim-solidity'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -60,6 +65,8 @@ set backspace=2		" more powerful backspacing
 set ruler           "lower right info
 set number
 set encoding=utf-8
+set spelllang=en
+set ve=block
 
 
 "text, tab, indent
@@ -79,7 +86,6 @@ highlight ColorColumn ctermbg=8
 
 "search
 set hlsearch    "highlight
-set ignorecase  "ignore case when searching
 set smartcase   "search case when input with case
 set incsearch   "search like browser
 
@@ -116,8 +122,11 @@ let g:UltiSnipsJumpBackwardTrigger="<C-l>"
 let g:UltiSnipsEditSplit="context"
 let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/ultisnips"]
+"let g:deoplete#enable_at_startup = 1
 
 "ctrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+
+set cm=blowfish
