@@ -112,6 +112,7 @@ imap <C-X> <Esc>:w<CR>\x
 map <C-D> :ConqueGdb
 map <leader>2 :NERDTreeToggle<CR>
 nmap <leader>8 :TagbarToggle<CR>
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 
 "auto complete
