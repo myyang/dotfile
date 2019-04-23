@@ -24,7 +24,12 @@ if [ "$pkgi" == "unknow" ]; then
 fi
 
 echo "=====> installing tools"
-$pkgi git git-flow bash-completion make bison binutils gcc cmake curl tig
+$pkgi git git-flow bash-completion make bison binutils gcc cmake curl tig tmux
+
+echo "=====> setup TMUX plugin manager"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
+git clone https://github.com/tmux-plugins/tmux-continuum ~/.tmux/plugins/tmux-continuum
 
 echo "=====> setup python and pip..."
 bash < <(curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
