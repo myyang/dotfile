@@ -27,3 +27,5 @@
 	lineNumber = true
 [push]
 	default = simple
+[url "git@github.com:"]
+	insteadOf = https://github.com/
