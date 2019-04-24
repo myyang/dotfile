@@ -1,8 +1,5 @@
 #garfield.yang .bashrc
 
-# pre export (PATH-related expected)
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"  # Put at last export, dominate none-compiled command
-
 #setup prompt
 function parse_git_branch { 
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
