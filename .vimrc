@@ -31,6 +31,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-syntastic/syntastic'
 
 " Autocomplete
 "Plugin 'Valloric/YouCompleteMe'
@@ -100,6 +101,10 @@ if has('statusline')
     set statusline+=%=                                  "left/right-aligned separator
     set statusline+=0x%-8B\                             "character code under cursor
     set statusline+=%l-%c\ %P                           "line-column percentage
+    " syntastic
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 endif
 
 "mapping
@@ -131,3 +136,9 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 set cm=blowfish
+
+"syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
