@@ -10,12 +10,10 @@ PS1="[\[\e[0;36m\]\A \[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[
 CLICOLOR=1
 LSCOLORS=GxFxCxDxBxegedabagaced
 
-# lazzzzzzzzzzy
-alias v="vim"
 alias vi="vim"
-alias l="ls -valhG"
 alias grep="grep --color=auto"
 
+# protection
 alias rm="rm -i"
 alias mv="mv -i"
 
