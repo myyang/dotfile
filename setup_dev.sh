@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "----- setup dev -----"
-
 pkgi=unknow
 this=`uname`
 if [ "$this" == "Darwin" ]; then
@@ -30,13 +28,3 @@ echo "=====> setup TMUX plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
 git clone https://github.com/tmux-plugins/tmux-continuum ~/.tmux/plugins/tmux-continuum
-
-echo "=====> setup python and pip..."
-bash < <(curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
-pyenv update 
-easy_install pip
-
-echo "=====> setup gvm ..."
-bash < <(curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-
-echo "----- finish -----"
