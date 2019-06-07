@@ -40,12 +40,13 @@ let g:go_play_open_browser = 0
 let g:go_auto_type_info = 1
 let g:go_doc_command = "gocode"
 
-let tool_bin_path = expand("~/.vim/vim-go-tool/bin")
+let tool_bin_path = expand("$HOME/.vim/vim-go-tool/bin")
 if !isdirectory(tool_bin_path)
     call mkdir(tool_bin_path, "p")
     autocmd VimEnter *.go execute ':GoInstallBinaries' | cw 20
 endif
 
+let $PATH = join([$PATH, tool_bin_path], ':')
 let g:go_bin_path = expand(tool_bin_path)
 
 set tw=80

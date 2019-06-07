@@ -11,7 +11,6 @@ fi
 # gvm
 if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
     source "$HOME/.gvm/scripts/gvm"
-    export PATH="$HOME/.vim/vim-go-tool/bin:$PATH"
 fi
 
 #==========================
