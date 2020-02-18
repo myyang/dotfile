@@ -56,6 +56,10 @@ Plugin 'fatih/vim-go'
 " Solidlity
 Plugin 'tomlion/vim-solidity'
 
+" C/C++
+Plugin 'vim-scripts/cscope.vim'
+Plugin 'vim-scripts/ctags.vim'
+
 call vundle#end()
 
 filetype plugin indent on
