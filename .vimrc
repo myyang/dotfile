@@ -27,11 +27,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'Chiel92/vim-autoformat'
 
 " Autocomplete
 "Plugin 'Valloric/YouCompleteMe'
@@ -114,7 +115,6 @@ map <C-i> <C-a>
 nmap <leader>o o<Esc>
 imap <C-X> <Esc>:w<CR>\x
 
-map <C-D> :ConqueGdb
 map <leader>2 :NERDTreeToggle<CR>
 nmap <leader>8 :TagbarToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
@@ -130,10 +130,9 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "~/.vim/ultisnips"]
 "let g:deoplete#enable_at_startup = 1
 
-"ctrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+" file search with :find
+set path+=**
+set wildmenu
 
 set cm=blowfish
 
