@@ -9,8 +9,8 @@ if [ -d "$HOME/.pyenv" ]; then
 fi
 
 # gvm
-if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
-    source "$HOME/.gvm/scripts/gvm"
+if [ -s "$HOME/.gvm/scripts/gvm" ]; then
+    ."$HOME/.gvm/scripts/gvm"
 fi
 
 #==========================
@@ -19,9 +19,3 @@ fi
 # git conflict
 alias gitcH="sed -e '/<<<</,/====/ d' -e '/>>>>/ d'"
 alias gitcN="sed -e '/====/,/>>>>/ d' -e '/<<<</ d'"
-
-
-#===========
-# shortcuts
-#===========
-alias gcl="$HOME/workspace/google-cloud-sdk/bin/gcloud"
