@@ -22,7 +22,7 @@ if [ "$pkgi" == "unknow" ]; then
 fi
 
 echo "=====> installing tools"
-$pkgi git git-flow bash-completion make bison binutils gcc cmake curl tig tmux
+$pkgi git git-flow bash-completion make bison binutils gcc cmake curl tig tmux shellcheck
 
 echo "=====> setup TMUX plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
