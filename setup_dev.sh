@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-pkgi=unknow
-this=`uname`
+pkgi=unknown
+this="$(uname)"
 if [ "$this" == "Darwin" ]; then
     # OSX
     echo "=====> setup  homebrew..."
@@ -16,13 +16,13 @@ elif [ "$this" == "Linux" ]; then
     pkgi="apt-get install -y "
 fi
 
-if [ "$pkgi" == "unknow" ]; then
+if [ "$pkgi" == "unknown" ]; then
     echo "Error: No expected package management"
     exit 1
 fi
 
 echo "=====> installing tools"
-$pkgi git git-flow bash-completion make bison binutils gcc cmake curl tig tmux shellcheck
+$pkgi git bash-completion make bison binutils gcc cmake curl tig tmux shellcheck
 
 echo "=====> setup TMUX plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
