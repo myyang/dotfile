@@ -36,7 +36,7 @@ Plugin 'Chiel92/vim-autoformat'
 
 " Autocomplete
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " GDB
