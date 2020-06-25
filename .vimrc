@@ -4,6 +4,9 @@
 au BufWrite /private/tmp/crontab.* set nowritebackup
 au BufWrite /private/etc/pw.* set nowritebackup
 
+" remove tailing spaces
+autocmd BufWritePre * %s/\s\+$//e
+
 filetype off                   " required!
 
 " auto-detect vundle ref=>http://blog.chh.tw/posts/vim-vundle/
