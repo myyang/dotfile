@@ -118,7 +118,7 @@ endif
 "mapping
 
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
-map <C-i> <C-a> 
+map <C-i> <C-a>
 nmap <leader>o o<Esc>
 imap <C-X> <Esc>:w<CR>\x
 
@@ -148,3 +148,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"load project/directory based .vimrc
+"set exrc
+"set secure
