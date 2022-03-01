@@ -19,3 +19,6 @@ fi
 # git conflict
 alias gitcH="sed -e '/<<<</,/====/ d' -e '/>>>>/ d'"
 alias gitcN="sed -e '/====/,/>>>>/ d' -e '/<<<</ d'"
+
+# json formatter/pretty with python
+alias pyjson="python -m json.tool"
