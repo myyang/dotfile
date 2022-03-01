@@ -66,8 +66,8 @@ filetype plugin indent on
 
 "General and other...
 set modeline
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
+set nocompatible    " Use Vim defaults instead of 100% vi compatibility
+set backspace=2     " more powerful backspacing
 set ruler           "lower right info
 set number
 set encoding=utf-8
@@ -151,4 +151,4 @@ let g:syntastic_check_on_wq = 0
 "set secure
 
 "autoformat
-au BufWrite * :Autoformat
+"au BufWrite * :Autoformat

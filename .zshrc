@@ -16,6 +16,10 @@ zstyle ':vcs_info:git:*' formats '%F{red}(%b)%f'
 setopt PROMPT_SUBST
 PROMPT='%F{cyan}%n%f:%F{yellow}%~%f ${vcs_info_msg_0_} %(?.%F{white}.%F{red})$%f '
 
+if [ -f ~/.devrc ]; then
+    source ~/.devrc
+fi
+
 if [ -f ~/.byhostrc ]; then
     source ~/.byhostrc
 fi
