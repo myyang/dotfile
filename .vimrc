@@ -28,7 +28,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mzlogin/vim-markdown-toc'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
@@ -44,7 +43,8 @@ Plugin 'vim-scripts/Conque-GDB'
 
 " Markup
 Plugin 'Rykka/riv.vim'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'plasticboy/vim-markdown'
+"Plugin 'mzlogin/vim-markdown-toc'
 
 " Python
 Plugin 'klen/python-mode'
