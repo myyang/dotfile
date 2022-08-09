@@ -12,6 +12,11 @@ if [ -s "$HOME/.gvm/scripts/gvm" ]; then
     source "$HOME/.gvm/scripts/gvm"
 fi
 
+# rust
+
+# shellcheck source=/dev/null
+source "$HOME/.cargo/env"
+
 #==========================
 # generic develop shortcuts
 #==========================
