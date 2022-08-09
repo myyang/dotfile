@@ -60,6 +60,9 @@ Plugin 'tomlion/vim-solidity'
 Plugin 'vim-scripts/cscope.vim'
 Plugin 'vim-scripts/ctags.vim'
 
+" Rust
+Plugin 'rust-lang/rust.vim'
+
 call vundle#end()
 
 filetype plugin indent on
