@@ -21,8 +21,9 @@ alias rm="rm -i"
 alias mv="mv -i"
 
 # bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    # shellcheck source=/dev/null
+    source "$(brew --prefix)/etc/bash_completion"
 fi
 
 # ptt

@@ -1,11 +1,14 @@
-if [ -f ~/.bashrc ]; then
- source ~/.bashrc
+if [ -f "$HOME/.bashrc" ]; then
+    # shellcheck source=/dev/null
+    source "$HOME/.bashrc"
 fi
 
-if [ -f ~/.devrc ]; then
-    source ~/.devrc
+if [ -f "$HOME/.devrc" ]; then
+    # shellcheck source=/dev/null
+    source "$HOME/.devrc"
 fi
 
-if [ -f ~/.byhostrc ]; then
-    source ~/.byhostrc
+if [ -f "$HOME/.byhostrc" ]; then
+    # shellcheck source=/dev/null
+    source "$HOME/.byhostrc"
 fi
