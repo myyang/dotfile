@@ -26,3 +26,6 @@ alias gitcN="sed -e '/====/,/>>>>/ d' -e '/<<<</ d'"
 
 # json formatter/pretty with python
 alias pyjson="python3 -m json.tool"
+
+# cscope generate
+# cd $PROEJCT_ROOT && find . -name '*.(go|c|cpp)' > cscopes.files && cscope -Rbq
