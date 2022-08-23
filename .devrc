@@ -25,4 +25,4 @@ alias gitcH="sed -e '/<<<</,/====/ d' -e '/>>>>/ d'"
 alias gitcN="sed -e '/====/,/>>>>/ d' -e '/<<<</ d'"
 
 # json formatter/pretty with python
-alias pyjson="python -m json.tool"
+alias pyjson="python3 -m json.tool"
