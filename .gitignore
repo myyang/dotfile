@@ -3,3 +3,9 @@
 
 #rope generated
 .ropeproject
+
+#cscope generated
+cscope.files
+cscope.in.out
+cscope.out
+cscope.po.out
