@@ -7,7 +7,7 @@ function parse_git_branch {
 PS1="[\[\e[0;36m\]\A \[\e[0m\]>\[\e[0;33m\]\W \[\e[0;31m\]\$(parse_git_branch)\[\e[0m\]]\[\e[0;36m\]\\$ \[\e[0m\]"
 
 # setup brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(brew shellenv)"
 
 # color schema
 CLICOLOR=1

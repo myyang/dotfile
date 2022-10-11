@@ -10,7 +10,7 @@ if [ "$this" == "Darwin" ]; then
     else
         echo "homebrew installed!"
     fi
-    pkgi="/opt/homebrew/bin/brew install "
+    pkgi="brew install "
 elif [ "$this" == "Linux" ]; then
     # assume debian
     pkgi="apt-get install -y "
