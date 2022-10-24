@@ -20,6 +20,11 @@ fi
 echo "=====> installing tools"
 $pkgi git bash-completion make bison binutils gcc cmake curl tig tmux shellcheck cscope ctags
 
+if [ "$this" == "Darwin" ]; then
+    # OSX
+    $pkgi install mike-engel/jwt-cli/jwt-cli
+fi
+
 echo "=====> setup TMUX plugin manager"
 if [ ! -d "$HOME/.tmux" ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
