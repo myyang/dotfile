@@ -16,6 +16,9 @@ zstyle ':vcs_info:git:*' formats '%F{red}(%b)%f'
 setopt PROMPT_SUBST
 PROMPT='%F{cyan}%n%f:%F{yellow}%~%f ${vcs_info_msg_0_} %(?.%F{white}.%F{red})$%f '
 
+autoload -Uz compinit
+compinit
+
 if [ -f ~/.devrc ]; then
     source ~/.devrc
 fi
