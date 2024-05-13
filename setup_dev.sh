@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 pkgi=unknown
 this="$(uname)"
 if [ "$this" == "Darwin" ]; then

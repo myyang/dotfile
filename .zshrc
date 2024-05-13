@@ -5,7 +5,7 @@ alias rm="rm -i"
 alias mv="mv -i"
 
 # setup brew
-eval "$(brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load version control information
 autoload -Uz vcs_info
