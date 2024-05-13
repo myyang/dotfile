@@ -47,8 +47,8 @@ Plugin 'Rykka/riv.vim'
 "Plugin 'mzlogin/vim-markdown-toc'
 
 " Python
-Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'python-mode/python-mode'
+"Plugin 'davidhalter/jedi-vim'
 
 " Go
 Plugin 'fatih/vim-go'

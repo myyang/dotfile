@@ -40,6 +40,7 @@ let g:pymode_syntax = 1
 let g:pymode_folding = 1
 
 "jedi-vim
+let g:jedi#auto_initialization = 0
 let g:jedi#auto_vim_configuration = 1
 let g:jedi#completions_command = "<C-n>"
 let g:jedi#popup_on_dot = 0  " use ycm auto-completion
@@ -47,7 +48,3 @@ let g:jedi#popup_on_dot = 0  " use ycm auto-completion
 "vim-snippet
 let g:ultisnips_python_style = "sphinx"
 
-"ycm-python
-" Please see ycm README.md:
-"   ### I can't complete python packages in a virtual environment.
-let g:ycm_python_binary_path = "python"
