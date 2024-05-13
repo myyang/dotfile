@@ -37,6 +37,7 @@ Plugin 'Chiel92/vim-autoformat'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'github/copilot.vim'
 
 " GDB
 Plugin 'vim-scripts/Conque-GDB'
@@ -121,6 +122,8 @@ endif
 map <C-i> <C-a>
 nmap <leader>o o<Esc>
 imap <C-X> <Esc>:w<CR>\x
+" copilot
+imap <C-L> <Plug>(copilot-accept-word)
 
 map <leader>2 :NERDTreeToggle<CR>
 nmap <leader>8 :TagbarToggle<CR>
