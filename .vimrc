@@ -27,25 +27,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 
 " Autocomplete
-"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'github/copilot.vim'
 
-" GDB
-Plugin 'vim-scripts/Conque-GDB'
-
 " Markup
 Plugin 'Rykka/riv.vim'
-"Plugin 'plasticboy/vim-markdown'
-"Plugin 'mzlogin/vim-markdown-toc'
 
 " Python
 Plugin 'python-mode/python-mode'
@@ -120,10 +113,7 @@ endif
 
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
 map <C-i> <C-a>
-nmap <leader>o o<Esc>
-imap <C-X> <Esc>:w<CR>\x
-" copilot
-imap <C-L> <Plug>(copilot-accept-word)
+
 
 map <leader>2 :NERDTreeToggle<CR>
 nmap <leader>8 :TagbarToggle<CR>
