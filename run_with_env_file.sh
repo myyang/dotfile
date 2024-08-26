@@ -3,8 +3,10 @@ ENV_FILE="$1"
 CMD=${*:2}
 
 set -o allexport
-# shellcheck disable=1090
+# shellcheck source=/dev/null
 . "$ENV_FILE"
 set +o allexport
+
+echo "$CMD"
 
 $CMD

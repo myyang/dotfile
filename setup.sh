@@ -14,6 +14,8 @@ for i in $(ls -a "$DIR" | grep '^\.[^.]' | grep -v '^\.\(vim\|git\)$'); do
     fi
 done
 
+echo  "alias env_cmd=\"$DIR/run_with_env_file.sh\"" >> "$HOME/.byhostrc"
+
 echo -e "\033[96mDot folder\033[0m"
 # vim 
 vimf=$DIR'/.vim/'
