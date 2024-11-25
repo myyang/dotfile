@@ -56,8 +56,9 @@ set colorcolumn=81
 "let g:go_list_type = "locationlist"
 "let g:go_golint_bin = "golangci-lint"
 let g:go_metalinter_command = "golangci-lint"
-let g:go_metalinter_enabled = ['gosimple', 'revive', 'errcheck', 'staticcheck', 'unused', 'ineffassign',  'goimports', 'gosec', 'misspell']
-autocmd BufWritePost,FileWritePost *.go execute ':GoMetaLinter' | cwindow
+let g:go_metalinter_enabled = ['gosimple', 'staticcheck', 'unused', 'ineffassign',  'goimports', 'misspell', 'errcheck']
+let g:syntastic_go_gometalinter_args = ['--allow-parallel-runners']
+"autocmd BufWritePost,FileWritePost *.go execute ':GoMetaLinter' | cwindow
 
 "autoformat
 "au BufWrite * :Autoformat
