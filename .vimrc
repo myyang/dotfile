@@ -43,7 +43,6 @@ Plugin 'Rykka/riv.vim'
 " Python
 "Plugin 'python-mode/python-mode'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'petobens/poet-v'
 
 " Go
 Plugin 'fatih/vim-go'
