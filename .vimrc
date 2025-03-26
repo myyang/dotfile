@@ -67,6 +67,7 @@ set nocompatible    " Use Vim defaults instead of 100% vi compatibility
 set backspace=2     " more powerful backspacing
 set ruler           "lower right info
 set number
+set relativenumber
 set encoding=utf-8
 set spelllang=en
 set ve=block
@@ -113,7 +114,6 @@ endif
 
 "mapping incrasing number to ctrl-i becase c-a would be caught by tmux
 map <C-i> <C-a>
-
 
 map <leader>2 :NERDTreeToggle<CR>
 nmap <leader>8 :TagbarToggle<CR>
