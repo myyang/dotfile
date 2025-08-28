@@ -35,7 +35,7 @@ Plugin 'Chiel92/vim-autoformat'
 " Autocomplete
 "Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'github/copilot.vim'
+"Plugin 'github/copilot.vim'
 
 " Markup
 Plugin 'Rykka/riv.vim'
@@ -43,6 +43,7 @@ Plugin 'Rykka/riv.vim'
 " Python
 "Plugin 'python-mode/python-mode'
 Plugin 'davidhalter/jedi-vim'
+"Plugin 'petobens/poet-v'
 
 " Go
 Plugin 'fatih/vim-go'
