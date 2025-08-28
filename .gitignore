@@ -9,3 +9,11 @@ cscope.files
 cscope.in.out
 cscope.out
 cscope.po.out
+
+tmp_code_*
+
+# local / user specific agentfile
+## CLAUDE code
+CLAUDE.local.md
+## ROVODEV (Jira)
+.agent.local.md
