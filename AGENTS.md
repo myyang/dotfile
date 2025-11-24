@@ -8,6 +8,11 @@
 - **AVOID** emoji in codebase
 - **SCAN** context hierarchically: Search and review `AGENTS.md` and `README.md` from the project root down to the specific working directory (e.g., `project/AGENTS.md` -> `project/services/README.md` -> `project/services/service-b/AGENTS.md`). Utilize the accumulated context from all levels.
 
+### Web Information
+- **SELECT** one of following method to gather info from web
+- **USE** MCP tool like `chrome-devtools`
+- **USE** `https://jina.ai/reader/` to help read webpage as markdown context, for example, telegram bot API page at `https://core.telegram.org/bots/api` to read with `https://jina.ai/reader/https://core.telegram.org/bots/api`
+
 ### Software Development Lifecycle
 
 #### Analysis & Planning
