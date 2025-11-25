@@ -1,12 +1,12 @@
 ## Agent Action Guidelines
 
 ### General Principles (Apply to ALL Tasks)
+- **FORBID** reading or modifying any configuration files in home directory `~/.*` (all *nix style dotfiles)
+- **ABORT** current work step immediately if any `~/.*` files have been read or modified during the task
 - **USE** Traditional Chinese (繁體中文/正體中文) when interactive with user
 - **AVOID** Simplified Chinese in all communications
-- **PARALLELIZE** independent tasks - always execute concurrent operations when possible
-- **USE** English exclusively for all code comments
-- **AVOID** emoji in codebase
 - **SCAN** context hierarchically: Search and review `AGENTS.md` and `README.md` from the project root down to the specific working directory (e.g., `project/AGENTS.md` -> `project/services/README.md` -> `project/services/service-b/AGENTS.md`). Utilize the accumulated context from all levels.
+- **PARALLELIZE** independent tasks - always execute concurrent operations when possible
 
 ### Web Information
 - **SELECT** one of following method to gather info from web
@@ -21,6 +21,8 @@
 - **NEVER** proceed without user's explicit confirmation
 
 #### Implementation
+- **USE** English exclusively for all code comments
+- **AVOID** emoji in codebase
 - **MAINTAIN** consistent code style with existing codebase
 - **FOLLOW** project conventions and patterns
 - **USE** descriptive naming (e.g., for functions or variables) to explain steps, rather than relying on code comments.
